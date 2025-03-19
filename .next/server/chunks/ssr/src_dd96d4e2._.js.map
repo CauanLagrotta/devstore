@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/projects/devstore/src/components/header.tsx"],"sourcesContent":["export function Header(){\r\n    return(\r\n        <div>\r\n            <h1>Header</h1>\r\n        </div>\r\n    )\r\n}"],"names":[],"mappings":";;;;;AAAO,SAAS;IACZ,qBACI,8OAAC;kBACG,cAAA,8OAAC;sBAAG;;;;;;;;;;;AAGhB","debugId":null}},
+    {"offset": {"line": 33, "column": 0}, "map": {"version":3,"sources":["file://C%3A/projects/devstore/src/app/%28store%29/layout.tsx"],"sourcesContent":["import { ReactNode } from \"react\";\r\nimport { Header } from \"@/components/header\";\r\n\r\nexport default function StoreLayout({ children }: { children: ReactNode }) {\r\n  return (\r\n    <div>\r\n      <Header />\r\n      {children}\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;AACA;;;AAEe,SAAS,YAAY,EAAE,QAAQ,EAA2B;IACvE,qBACE,8OAAC;;0BACC,8OAAC,4HAAA,CAAA,SAAM;;;;;YACN;;;;;;;AAGP","debugId":null}}]
+}

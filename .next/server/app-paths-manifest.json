@@ -1,0 +1,6 @@
+{
+  "/(store)/(home)/page": "app/(store)/(home)/page.js",
+  "/(store)/page": "app/(store)/page.js",
+  "/icon.png/route": "app/icon.png/route.js",
+  "/page": "app/page.js"
+}
