@@ -82,7 +82,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 async function getFeaturedProducts() {
-    const response = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$api$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["api"])("/products/featured");
+    const response = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$api$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["api"])("/products/featured", {
+        next: {
+            revalidate: 60 * 60 // 1 hour
+        }
+    });
     const products = await response.json();
     return products;
 }
@@ -104,7 +108,7 @@ async function Home() {
                         alt: "moletom"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(store)/(home)/page.tsx",
-                        lineNumber: 23,
+                        lineNumber: 27,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -118,7 +122,7 @@ async function Home() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(store)/(home)/page.tsx",
-                                lineNumber: 33,
+                                lineNumber: 37,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -131,19 +135,19 @@ async function Home() {
                                 })
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(store)/(home)/page.tsx",
-                                lineNumber: 34,
+                                lineNumber: 38,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(store)/(home)/page.tsx",
-                        lineNumber: 32,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(store)/(home)/page.tsx",
-                lineNumber: 19,
+                lineNumber: 23,
                 columnNumber: 7
             }, this),
             otherProducts.map((product)=>{
@@ -160,7 +164,7 @@ async function Home() {
                             alt: "moletom"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(store)/(home)/page.tsx",
-                            lineNumber: 52,
+                            lineNumber: 56,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -171,7 +175,7 @@ async function Home() {
                                     children: product.title
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(store)/(home)/page.tsx",
-                                    lineNumber: 62,
+                                    lineNumber: 66,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -184,26 +188,26 @@ async function Home() {
                                     })
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(store)/(home)/page.tsx",
-                                    lineNumber: 65,
+                                    lineNumber: 69,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/(store)/(home)/page.tsx",
-                            lineNumber: 61,
+                            lineNumber: 65,
                             columnNumber: 13
                         }, this)
                     ]
                 }, product.id, true, {
                     fileName: "[project]/src/app/(store)/(home)/page.tsx",
-                    lineNumber: 47,
+                    lineNumber: 51,
                     columnNumber: 11
                 }, this);
             })
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(store)/(home)/page.tsx",
-        lineNumber: 17,
+        lineNumber: 21,
         columnNumber: 5
     }, this);
 }

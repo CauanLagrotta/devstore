@@ -61,6 +61,7 @@ __turbopack_context__.s({
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$api$2f$products$2f$data$2e$json__$28$json$29$__ = __turbopack_context__.i("[project]/src/app/api/products/data.json (json)");
 ;
 async function GET() {
+    await new Promise((resolve)=>setTimeout(resolve, 1000));
     const featuredProducts = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$api$2f$products$2f$data$2e$json__$28$json$29$__["default"].products.filter((product)=>product.featured);
     return Response.json(featuredProducts);
 }
