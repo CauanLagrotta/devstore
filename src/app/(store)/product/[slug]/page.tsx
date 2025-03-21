@@ -1,11 +1,44 @@
+import { api } from "@/data/api";
+import { Product } from "@/data/types/product";
+import { Metadata } from "next";
 import Image from "next/image";
 
-export default function ProductPage() {
+interface ProductProps {
+  params: {
+    slug: string;
+  };
+}
+
+async function getProduct(slug: string): Promise<Product> {
+  const response = await api(`/products/${slug}`, {
+    next: {
+      // controle de cache. A cada 1 hora, a página é revalidada
+      revalidate: 60 * 60, // 1 hour
+    },
+  });
+
+  const product = await response.json();
+  return product;
+}
+
+export async function generateMetadata({
+  params,
+}: ProductProps): Promise<Metadata> {
+  const product = await getProduct(params.slug)
+
+  return {
+    title: `${product.title} | DevStore`,
+  };
+}
+
+export default async function ProductPage({ params }: ProductProps) {
+  const product = await getProduct(params.slug);
+
   return (
     <div className="relative grid max-h-[860px] grid-cols-3">
       <div className="col-span-2 overflow-hidden">
         <Image
-          src="/moletom-java.png"
+          src={product.image}
           width={1000}
           height={1000}
           alt="moletom java"
@@ -14,20 +47,29 @@ export default function ProductPage() {
       </div>
 
       <div className="flex flex-col justify-center px-12">
-        <h1 className="text-3xl font-bold leading-tight">Moletom java 2023</h1>
+        <h1 className="text-3xl font-bold leading-tight">{product.title}</h1>
         <p className="mt-2 leading-relaxed text-zinc-450">
-          Moletom Java 2023, confeccionado em algodão e poliéster, possui capuz
-          com cordão para ajuste, bolso canguru, mangas longas, estampa frontal
-          e acabamento canelado. Ideal para compor looks despojados e
-          confortáveis.
+          {product.description}
         </p>
 
         <div className="mt-8 flex items-center gap-3">
           <span className="inline-block rounded-full bg-violet-500 px-5 py-2.5 font-semibold">
-            $129,00
+            {product.price.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}
           </span>
           <span className="text-sm text-zinc-500">
-            Em 12x sem juros de R$10,75
+            Divida de até 12x de{" "}
+            {(product.price / 12).toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}{" "}
+            sem juros
           </span>
         </div>
 

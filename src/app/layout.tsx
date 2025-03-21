@@ -5,7 +5,11 @@ import "./globals.css";
 const geistSans = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "DevStore",
+  title: {
+    template: "%s | DevStore",
+    default: "DevStore",
+  },
+  
   description: "A store for developers",
 };
 

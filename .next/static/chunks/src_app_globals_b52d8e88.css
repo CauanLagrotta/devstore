@@ -271,6 +271,10 @@
 }
 
 @layer utilities {
+  .\@container {
+    container-type: inline-size;
+  }
+
   .collapse {
     visibility: collapse;
   }
@@ -572,6 +576,10 @@
 
   .h-full {
     height: 100%;
+  }
+
+  .h-screen {
+    height: 100vh;
   }
 
   .max-h-\[860px\] {
