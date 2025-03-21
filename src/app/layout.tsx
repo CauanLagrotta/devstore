@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { CartProvider } from "@/contexts/cart-context";
 
 const geistSans = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -18,8 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br" className={`${geistSans.variable} antialiased `}>
-      <body className="bg-zinc-950 text-zinc-50">{children}</body>
+    <html lang="pt-br" className={`${geistSans.variable} antialiased`}>
+      <body className="bg-zinc-950 text-zinc-50">
+        <CartProvider>
+          {children}
+        </CartProvider>
+      </body>
     </html>
   );
 }

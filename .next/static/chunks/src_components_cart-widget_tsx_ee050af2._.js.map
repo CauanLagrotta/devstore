@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/projects/devstore/src/components/cart-widget.tsx"],"sourcesContent":["\"use client\";\r\n\r\nimport { useCart } from \"@/contexts/cart-context\";\r\nimport { ShoppingBag } from \"lucide-react\";\r\n\r\nexport function CartWidget() {\r\n  const { items } = useCart();\r\n\r\n  return (\r\n    <div className=\"flex items-center gap-2\">\r\n      <ShoppingBag className=\"h-4 w-4\" />\r\n      <span className=\"text-sm\">Cart ({items.length})</span>\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;AAEA;AACA;;;AAHA;;;AAKO,SAAS;;IACd,MAAM,EAAE,KAAK,EAAE,GAAG,CAAA,GAAA,sIAAA,CAAA,UAAO,AAAD;IAExB,qBACE,6LAAC;QAAI,WAAU;;0BACb,6LAAC,uNAAA,CAAA,cAAW;gBAAC,WAAU;;;;;;0BACvB,6LAAC;gBAAK,WAAU;;oBAAU;oBAAO,MAAM,MAAM;oBAAC;;;;;;;;;;;;;AAGpD;GATgB;;QACI,sIAAA,CAAA,UAAO;;;KADX","debugId":null}}]
+}
