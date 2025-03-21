@@ -1,5 +1,6 @@
 {
   "/(store)/(home)/page": "app/(store)/(home)/page.js",
+  "/(store)/product/[slug]/opengraph-image-1r2n5f/route": "app/(store)/product/[slug]/opengraph-image-1r2n5f/route.js",
   "/(store)/product/[slug]/page": "app/(store)/product/[slug]/page.js",
-  "/icon.png/route": "app/icon.png/route.js"
+  "/api/products/featured/route": "app/api/products/featured/route.js"
 }

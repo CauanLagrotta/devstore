@@ -9,7 +9,6 @@ export const metadata: Metadata = {
     template: "%s | DevStore",
     default: "DevStore",
   },
-  
   description: "A store for developers",
 };
 
