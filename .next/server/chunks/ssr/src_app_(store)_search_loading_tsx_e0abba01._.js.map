@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/projects/devstore/src/app/%28store%29/search/loading.tsx"],"sourcesContent":["export default function SearchLoading(){\r\n    return(\r\n        <div className=\"flex flex-col gap-4\">\r\n            <p></p>\r\n        </div>\r\n    )\r\n}"],"names":[],"mappings":";;;;;AAAe,SAAS;IACpB,qBACI,8OAAC;QAAI,WAAU;kBACX,cAAA,8OAAC;;;;;;;;;;AAGb","debugId":null}}]
-}

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/projects/devstore/src/components/header.tsx"],"sourcesContent":["export function Header(){\r\n    return(\r\n        <div className=\"flex items-center justify-between\">\r\n            <div className=\"flex items-center gap-5\">\r\n                <Link></Link>\r\n            </div>\r\n\r\n            <div className=\"flex items-center gap-4\"></div>\r\n        </div>\r\n    )\r\n}"],"names":[],"mappings":";;;;;AAAO,SAAS;IACZ,qBACI,8OAAC;QAAI,WAAU;;0BACX,8OAAC;gBAAI,WAAU;0BACX,cAAA,8OAAC;;;;;;;;;;0BAGL,8OAAC;gBAAI,WAAU;;;;;;;;;;;;AAG3B","debugId":null}},
-    {"offset": {"line": 48, "column": 0}, "map": {"version":3,"sources":["file://C%3A/projects/devstore/src/app/%28store%29/layout.tsx"],"sourcesContent":["import { ReactNode } from \"react\";\r\nimport { Header } from \"@/components/header\";\r\n\r\nexport default function StoreLayout({ children }: { children: ReactNode }) {\r\n  return (\r\n    <div className=\"mx-auto grid min-h-screen w-full max-w-[1600px] grid-rows-[min-content_max-content] gap-5 p-8\">\r\n      <Header />\r\n      {children}\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;AACA;;;AAEe,SAAS,YAAY,EAAE,QAAQ,EAA2B;IACvE,qBACE,8OAAC;QAAI,WAAU;;0BACb,8OAAC,4HAAA,CAAA,SAAM;;;;;YACN;;;;;;;AAGP","debugId":null}}]
-}

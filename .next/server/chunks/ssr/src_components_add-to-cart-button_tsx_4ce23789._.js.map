@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/projects/devstore/src/components/add-to-cart-button.tsx"],"sourcesContent":["\"use client\";\r\n\r\nimport { useCart } from \"@/contexts/cart-context\";\r\n\r\nexport interface AddToCartButtonProps {\r\n  productId: number;\r\n}\r\n\r\nexport function AddToCartButton({ productId }: AddToCartButtonProps) {\r\n  const { addToCart } = useCart();\r\n\r\n  function handleAddProductToCart() {\r\n    addToCart(productId);\r\n  }\r\n\r\n  return (\r\n    <button\r\n      type=\"button\"\r\n      onClick={handleAddProductToCart}\r\n      className=\"mt-8 flex h-12 items-center justify-center rounded-full bg-emerald-600 font-semibold text-white\"\r\n    >\r\n      Adicionar ao carrinho\r\n    </button>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;AAEA;AAFA;;;AAQO,SAAS,gBAAgB,EAAE,SAAS,EAAwB;IACjE,MAAM,EAAE,SAAS,EAAE,GAAG,CAAA,GAAA,mIAAA,CAAA,UAAO,AAAD;IAE5B,SAAS;QACP,UAAU;IACZ;IAEA,qBACE,8OAAC;QACC,MAAK;QACL,SAAS;QACT,WAAU;kBACX;;;;;;AAIL","debugId":null}}]
-}

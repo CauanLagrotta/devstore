@@ -1,7 +1,0 @@
-{
-  "/(store)/(home)/page": "app/(store)/(home)/page.js",
-  "/(store)/search/page": "app/(store)/search/page.js",
-  "/api/products/featured/route": "app/api/products/featured/route.js",
-  "/api/products/search/route": "app/api/products/search/route.js",
-  "/icon.png/route": "app/icon.png/route.js"
-}

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
-    {"offset": {"line": 57, "column": 0}, "map": {"version":3,"sources":["file://C%3A/projects/devstore/src/app/api/products/featured/route.ts"],"sourcesContent":["import data from '../data.json'\r\n\r\nexport async function GET(){\r\n    await new Promise(resolve => setTimeout(resolve, 1000))\r\n\r\n    const featuredProducts = data.products.filter(product => product.featured)\r\n\r\n    return Response.json(featuredProducts)\r\n}"],"names":[],"mappings":";;;AAAA;;AAEO,eAAe;IAClB,MAAM,IAAI,QAAQ,CAAA,UAAW,WAAW,SAAS;IAEjD,MAAM,mBAAmB,6GAAA,CAAA,UAAI,CAAC,QAAQ,CAAC,MAAM,CAAC,CAAA,UAAW,QAAQ,QAAQ;IAEzE,OAAO,SAAS,IAAI,CAAC;AACzB","debugId":null}}]
-}
